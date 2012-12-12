@@ -6,12 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ralphtheninja/rot13-stream.git"
+  },
+  "homepage": "https://github.com/ralphtheninja/rot13-stream",
   "keywords": [
     "rot13",
     "crypto",
     "stream"
   ],
-  "author": "Lars-Magnus Björnsson Skog",
-  "license": "MIT"
+  "author": {
+    "name": "Lars-Magnus Björnsson Skog",
+    "email": "lars.magnus.skog@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "through": "~2.1.0"
+  },
+  "devDependencies": {
+    "asynct": "*"
+  }
 }
