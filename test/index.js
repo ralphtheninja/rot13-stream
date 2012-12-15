@@ -18,6 +18,20 @@ exports['upper case'] = function (test) {
   s.write('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 };
 
+exports['inverse'] = function (test) {
+  var a = rot13();
+  var b = rot13();
+  var input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  a.on('data', function(data) {
+    b.write(data);
+  });
+  b.on('data', function(data) {
+    test.equal(data.toString(), input);
+    test.done();
+  });
+  a.write(input);
+};
+
 exports['non alphabetical'] = function (test) {
   var s = rot13();
   var nonAlpha = '0123456789;:/!@#$%^&*()_+=-';
